@@ -2,10 +2,12 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
-/*
-
- */
+/**
+*Class {@code SetWordCounter} implements the storage of a set of words with its own counters(objects of {@code WordCounter})
+ {@param wordsCount} is count all words in set
+ * */
 public class SetWordCounter extends HashSet<WordCounter> {
+
     private int wordsCount;
 
     public SetWordCounter() {

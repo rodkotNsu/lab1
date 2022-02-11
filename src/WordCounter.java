@@ -1,4 +1,7 @@
-
+/**
+ * Class {@code WordCounter} implements the storage of the word and its quantity in the text
+ * {@see #click} is method increases the number of words in the text
+ */
 public class WordCounter {
     private final String word;
     private Integer count;

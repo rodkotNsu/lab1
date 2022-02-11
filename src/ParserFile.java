@@ -3,8 +3,11 @@ import com.sun.jdi.event.ExceptionEvent;
 import java.io.*;
 import java.util.*;
 
+/**
+ * {@code ParserFile } is this main class that implements the calculation of word frequency statistics from the text in the file {@param fileName}
+ * {@param table} is set of many words and frequencies ({@see SetWordCounter })
+ */
 public class ParserFile {
-
     static public final Set<Character> STANDARD_ALLOWED_CHARACTERS = Set.of('-', '`');
 
     private final String fileName;

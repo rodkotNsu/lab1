@@ -18,9 +18,12 @@ public class WordCounter {
     public void click() {
         this.count++;
     }
+
     public void setCount(Integer count) {
-        this.count = count;
+        if (count >= 0)
+            this.count = count;
     }
+
     public String getWord() {
         return word;
     }
@@ -45,6 +48,6 @@ public class WordCounter {
         }
 
         return ((WordCounter) other).word.equals(this.word)
-        && ((WordCounter) other).count.equals(this.count);
+                && ((WordCounter) other).count.equals(this.count);
     }
 }

@@ -2,10 +2,11 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
+
 /**
-*Class {@code SetWordCounter} implements the storage of a set of words with its own counters(objects of {@code WordCounter})
- {@param wordsCount} is count all words in set
- * */
+ * Class {@code SetWordCounter} implements the storage of a set of words with its own counters(objects of {@code WordCounter})
+ * {@param wordsCount} is count all words in set
+ */
 public class SetWordCounter extends HashSet<WordCounter> {
 
     private int wordsCount;
@@ -72,10 +73,10 @@ public class SetWordCounter extends HashSet<WordCounter> {
     }
 
     public String wordCounterInCsv(WordCounter wordCounter) {
-        return new String("\"" + wordCounter.getWord() + "\"," + wordCounter.getCount() + "," + (double) (wordCounter.getCount()) / wordsCount);
+        return "\"" + wordCounter.getWord() + "\"," + wordCounter.getCount() + "," + (double) (wordCounter.getCount()) / wordsCount;
     }
 
-     static class SortAlphabet implements Comparator<WordCounter> {
+    static class SortAlphabet implements Comparator<WordCounter> {
         @Override
         public int compare(WordCounter o1, WordCounter o2) {
             if (o1.getCount().equals(o2.getCount()))
